@@ -1,8 +1,9 @@
 const express = require('express');
-const path = require('path');
+const path = require('path')
+
 const htmlRoute = require('./routes/htmlRoutes.js')
-
-
+const apiRoute = require('./routes/apiRoutes.js')
+const notes = require('./db/db.json');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -16,7 +17,8 @@ app.use(express.static('public'));
 //GET '/' and '/notes' path to render HTML
 app.use('/', htmlRoute);
 
-
+//enables GET 'api/notes' path to render db.json data
+app.use('/api', apiRoute)
 
 
 
