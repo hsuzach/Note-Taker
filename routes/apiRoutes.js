@@ -21,22 +21,22 @@ apiRoute.post('/notes', (req,res) =>{
     if (err) {
       console.error(err);
     } else {
-      // Convert db notes into JSON object
-      const savedNotes = JSON.parse(data);
 
       // Add new note to db of notes
-      savedNotes.push(newNote);
+      notes.push(newNote);
 
       // rewrite db with new note
       fs.writeFile(
         './db/db.json',
-        JSON.stringify(savedNotes, null, 2),
+        JSON.stringify(notes, null, 2),
         (writeErr) =>
           writeErr
             ? console.error(writeErr)
             : console.info('Successfully added new Note!')
       );
+
     }
+    res.json(200)
   });
   
   const response = {
