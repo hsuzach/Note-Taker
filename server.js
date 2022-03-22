@@ -17,11 +17,8 @@ app.use(express.static('public'));
 //GET '/' and '/notes' path to render HTML
 app.use('/', htmlRoute);
 
-//enables GET 'api/notes' path to render db.json data
+//enables GET, PUSH, DELETE 'api/notes' path to edit db.json data
 app.use('/api', apiRoute)
-
-
-
 
 
 app.listen(PORT)

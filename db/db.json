@@ -1,10 +1,7 @@
 [
   {
-    "title": "Test Title",
-    "text": "Test text"
-  },
-  {
-    "title": "Second Title",
-    "text": "Second Text"
+    "title": "Sample Note",
+    "text": "Sample Text",
+    "id": "dc4f94bd-6f63-4abe-bd2f-6f8c21242ef4"
   }
 ]
